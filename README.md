@@ -18,4 +18,4 @@ Build:
 Run the Call Graph example:
 
     $ clang -flegacy-pass-manager -Xclang -load -Xclang \
-    $ llvm-pass-skeleton/build/callgraph/libCallGraphPass.so Test.c something.c
+    $ llvm-pass-skeleton/build/callgraph/libCallGraphPass.so something.c

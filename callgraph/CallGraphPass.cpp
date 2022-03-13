@@ -56,7 +56,14 @@ namespace {
             auto setEnd = iter->second.end();
 
             for (; setIter != setEnd; ++setIter) {
-                errs() << "----> " << setIter.operator*()->getName() << "\n";
+                // Check recursion
+                bool recursive = iter->first->getName().equals(setIter.operator*()->getName());
+                if (recursive) {
+                    errs() << "----> " << setIter.operator*()->getName() << " [recursive]\n";
+                }
+                else {
+                    errs() << "----> " << setIter.operator*()->getName() << "\n";
+                }
             }
             errs() << "\n";
         }
