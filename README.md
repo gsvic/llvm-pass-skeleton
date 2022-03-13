@@ -1,7 +1,10 @@
 # llvm-pass-skeleton
 
-A completely useless LLVM pass.
-It's for LLVM 3.8.
+This is a fork of https://github.com/sampsyo/llvm-pass-skeleton repo for Cornell CS6120 - 
+Advanced Compilers class taught by Andrian Sampson.
+
+## What's New
+So far, an extra pass that constructs a method call graph is added.
 
 Build:
 
@@ -12,6 +15,7 @@ Build:
     $ make
     $ cd ..
 
-Run:
+Run the Call Graph example:
 
-    $ clang -Xclang -load -Xclang build/skeleton/libSkeletonPass.* something.c
+    $ clang -flegacy-pass-manager -Xclang -load -Xclang \
+    $ llvm-pass-skeleton/build/callgraph/libCallGraphPass.so Test.c something.c
