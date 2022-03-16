@@ -3,9 +3,6 @@
 This is a fork of https://github.com/sampsyo/llvm-pass-skeleton repo for Cornell CS6120 - 
 Advanced Compilers class taught by Andrian Sampson.
 
-## What's New
-So far, an extra pass that constructs a method call graph is added.
-
 Build:
 
     $ cd llvm-pass-skeleton
