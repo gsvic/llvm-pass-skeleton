@@ -6,43 +6,28 @@ void c(int*);
 void d(int);
 
 int main(int argc, const char** argv) {
-    int called[3];
+    int i = 5;
 
-    a(called);
+    if (i < 2) {
+        printf("False\n");
+    }
+    else {
+        printf("True\n");
+    }
+
+    if (i > 2) {
+        printf("True\n");
+    }
+    else {
+        printf("False\n");
+    }
+
+    if (i > 100) {
+        printf("True\n");
+    }
+    else {
+        printf("False\n");
+    }
 
     return 0;
-}
-
-void a(int* called) {
-    if (called[0] < 3) {
-        called[0] += 1;
-
-        printf("a\n");
-        b(called);
-    }
-}
-
-void b(int* called) {
-    if (called[1] < 1) {
-        called[1] += 1;
-
-        printf("b\n");
-        c(called);
-    }
-}
-void c(int* called) {
-    if (called[2] < 1) {
-        called[2] += 1;
-
-        printf("c\n");
-        a(called);
-        d(1);
-    }
-}
-
-void d(int i) {
-    printf("d: %d\n", i);
-    if (i > 0 && i < 5) {
-        d(i + 1);
-    }
 }
