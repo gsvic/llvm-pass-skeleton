@@ -11,3 +11,4 @@ link_directories(${LLVM_LIBRARY_DIRS})
 
 add_subdirectory(skeleton)  # Use your pass name here.
 add_subdirectory(flippass)  # Use your pass name here.
+add_subdirectory(looppass)  # Use your pass name here.
